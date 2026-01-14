@@ -1,0 +1,90 @@
+{
+  "manifest_version": "0.3",
+  "name": "world-bank-mcp",
+  "display_name": "World Bank",
+  "version": "1.0.0",
+  "description": "Access World Bank Documents & Reports API for searching and retrieving public Bank documents. Search by country, document type, theme, sector, date range, and full-text content. Retrieve document metadata, abstracts, PDFs, and more.",
+  "author": {
+    "name": "DeployContext",
+    "url": "https://deploycontext.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeployContext/world-bank.git"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "dist/bundle.cjs",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/dist/bundle.cjs"]
+    }
+  },
+  "compatibility": {
+    "platforms": ["darwin", "win32"]
+  },
+  "tools": [
+    {
+      "name": "wb_search_documents",
+      "title": "Search Documents",
+      "description": "Search World Bank documents with filters",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "wb_get_document",
+      "title": "Get Document",
+      "description": "Get a specific document by ID",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "wb_list_facets",
+      "title": "List Facets",
+      "description": "Get available values for filtering fields",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "wb_list_countries",
+      "title": "List Countries",
+      "description": "Get list of all available countries",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "wb_list_document_types",
+      "title": "List Document Types",
+      "description": "Get list of all available document types",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    }
+  ],
+  "keywords": [
+    "world bank",
+    "documents",
+    "reports",
+    "development",
+    "projects",
+    "procurement",
+    "environmental assessment",
+    "working paper",
+    "brief",
+    "research"
+  ],
+  "license": "MIT",
+  "privacy_policies": [
+    "https://deploycontext.com/privacy"
+  ],
+  "icon": "icon.png"
+}
