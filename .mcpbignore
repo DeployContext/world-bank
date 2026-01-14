@@ -1,0 +1,39 @@
+# Node.js - EXCLUDE since bundle is self-contained
+node_modules/
+package-lock.json
+
+# Source files - EXCLUDE since we use bundled dist/bundle.cjs
+server/
+
+# Thin client - not needed for MCPB
+thin-client/
+
+# Build artifacts
+dist/
+
+# Development files
+tests/
+prompts/
+.ralph/
+stdio-server.js
+claude_desktop_config.json
+Dockerfile
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
